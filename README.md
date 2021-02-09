@@ -1,0 +1,1 @@
+Authentication App with the MERN stack
