@@ -14,7 +14,7 @@ app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: ["http://localhost:3000"] }));
+app.use(cors({ origin: ["http://localhost:3000"], credentials: true }));
 
 /*
 app.get("/test",(req,res)=>{

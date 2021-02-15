@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Navbar.scss";
 
 function Navbar() {
+  const [klasa, setClass] = useState("link");
   return (
-    <div>
-      <Link to="/">Home</Link>
-      <Link to="/register">Register</Link>
-      <Link to="/login">Login</Link>
-      <Link to="/customer">Customers</Link>
+    <div className="links">
+      <Link
+        to="/"
+        className={klasa}
+        onClick={() => {
+          setClass("link clicked");
+        }}
+      >
+        Home
+      </Link>
+      <Link to="/register" className={klasa}>
+        Register
+      </Link>
+      <Link to="/login" className={klasa}>
+        Login
+      </Link>
+      <Link to="/customer" className={klasa}>
+        Customers
+      </Link>
     </div>
   );
 }

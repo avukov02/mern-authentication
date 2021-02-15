@@ -1,0 +1,25 @@
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d292d3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+}
+
+.link {
+  margin: 0px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  &:hover {
+    border-bottom: 2px solid rgb(149, 54, 171);
+  }
+}
+
+.clicked {
+  border-bottom: 2px solid rgb(149, 54, 171);
+}
