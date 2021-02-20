@@ -1,13 +1,13 @@
 .links {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #d292d3;
+  justify-content: space-between;
+  background-color: #edc7b7;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 60px;
   overflow: hidden;
 }
 
@@ -15,7 +15,15 @@
   margin: 0px 10px;
   text-decoration: none;
   font-size: 20px;
+  color: #ac3b61;
+  font-weight: bolder;
   &:hover {
     border-bottom: 2px solid rgb(149, 54, 171);
   }
+}
+
+body {
+  background-color: #eee2dc;
+  margin-top: 100px;
+  font-family: sans-serif;
 }

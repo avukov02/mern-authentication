@@ -1,0 +1,12 @@
+.lbutton {
+  margin-right: 10px;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: #ac3b61;
+  font-weight: bolder;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+  background-color: #eee2dc;
+}

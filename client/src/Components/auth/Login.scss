@@ -1,10 +1,10 @@
-$boja: rgb(149, 54, 171);
+$boja: #ac3b61;
 
 h1 {
   text-align: center;
   margin-top: 100px;
   color: $boja;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 form {
@@ -17,14 +17,23 @@ form {
     width: 250px;
     height: 35px;
     margin-bottom: 15px;
-    border: 2px solid #555;
+    border: 3px solid #edc7b7;
     border-radius: 8px;
+    outline: none;
+    background-color: #eee2dc;
   }
 
   button {
     border-radius: 12px;
-    padding: 14px 28px;
+    border-color: $boja;
+    padding: 10px 20px;
     color: $boja;
     margin-top: 10px;
+    font-weight: bolder;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+    background-color: #edc7b7;
   }
 }
