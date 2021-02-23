@@ -1,4 +1,4 @@
-#Authentication App with the MERN stack
+# Authentication App with the MERN stack
 
 I created a minimal full-stack login/authorization app using the MERN stack (MongoDB for database, Express and Node for backend and React for frontend)
 
