@@ -7,6 +7,7 @@ import { useHistory } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const { getLoggedIn } = useContext(AuthContext);
   const history = useHistory();
@@ -26,7 +27,8 @@ function Login() {
       await getLoggedIn();
       history.push("/");
     } catch (err) {
-      console.error(err);
+      console.log(err);
+      setErrorMsg(JSON.stringify(err.response.data.message));
     }
   }
 
@@ -47,6 +49,7 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Login</button>
+        <h3>{errorMsg}</h3>
       </form>
     </div>
   );
