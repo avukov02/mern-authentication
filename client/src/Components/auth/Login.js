@@ -28,7 +28,7 @@ function Login() {
       history.push("/");
     } catch (err) {
       console.log(err);
-      setErrorMsg(JSON.stringify(err.response.data.message));
+      setErrorMsg(err.response.data.errorMessage);
     }
   }
 
@@ -49,7 +49,7 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Login</button>
-        <h3>{errorMsg}</h3>
+        <h3 className="error">{errorMsg}</h3>
       </form>
     </div>
   );

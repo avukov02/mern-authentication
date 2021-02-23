@@ -7,6 +7,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordVerify, setPasswordVerify] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const { getLoggedIn } = useContext(AuthContext);
   const history = useHistory();
@@ -28,6 +29,7 @@ function Register() {
       history.push("/");
     } catch (err) {
       console.error(err);
+      setErrorMsg(err.response.data.errorMessage);
     }
   }
 
@@ -55,6 +57,7 @@ function Register() {
         />
         <button type="submit">Register</button>
       </form>
+      <h3 class="error">{errorMsg}</h3>
     </div>
   );
 }
